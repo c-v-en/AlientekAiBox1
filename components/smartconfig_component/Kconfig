@@ -1,0 +1,48 @@
+menu "SmartConfig Component Configuration"
+
+    config SC_ENABLE_ESPTOUCH_V2
+        bool "Enable ESPTOUCH V2 protocol support"
+        default n
+        help
+            Enable ESPTOUCH V2 protocol for additional data transmission.
+
+    config SC_TASK_STACK_SIZE
+        int "SmartConfig task stack size"
+        default 4096
+        range 2048 8192
+        help
+            Stack size for SmartConfig task in bytes.
+
+    config SC_TASK_PRIORITY
+        int "SmartConfig task priority"
+        default 3
+        range 1 24
+        help
+            FreeRTOS task priority for SmartConfig.
+
+    config SC_MAX_OBSERVERS
+        int "Maximum number of status observers"
+        default 3
+        range 1 10
+        help
+            Maximum number of callback functions that can be registered.
+
+    config SC_AUTO_SAVE_WIFI
+        bool "Auto save WiFi credentials"
+        default y
+        help
+            Automatically save WiFi credentials to NVS after successful connection.
+
+    config SC_AUTO_RECONNECT
+        bool "Auto reconnect on disconnect"
+        default y
+        help
+            Automatically try to reconnect when WiFi disconnects.
+
+    config SC_SET_AP_MAC
+        bool "Set target AP MAC address"
+        default y
+        help
+            Set BSSID of target AP for more reliable connection.
+
+endmenu

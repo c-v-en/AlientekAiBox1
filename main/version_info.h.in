@@ -1,0 +1,12 @@
+#ifndef VERSION_INFO_H
+#define VERSION_INFO_H
+
+#define APP_VERSION_MAJOR       "@PROJECT_VERSION_MAJOR@"
+#define APP_VERSION_MINOR       "@PROJECT_VERSION_MINOR@"
+#define APP_VERSION_PATCH       "@PROJECT_VERSION_PATCH@"
+
+#define APP_GIT_COMMIT          "@GIT_COMMIT@"
+#define APP_GIT_BRANCH          "@GIT_BRANCH@"
+#define APP_BUILD_TIME          "@BUILD_TIME@"
+
+#endif

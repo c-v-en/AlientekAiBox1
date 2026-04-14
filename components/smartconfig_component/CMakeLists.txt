@@ -1,0 +1,15 @@
+idf_component_register(
+    SRCS 
+        "src/smartconfig_component.c"
+        "src/sc_driver_esptouch.c"
+        "src/sc_storage_nvs.c"
+        "src/sc_wifi_esp32.c"
+    INCLUDE_DIRS 
+        "include"
+    PRIV_REQUIRES 
+        esp_wifi
+        wpa_supplicant
+        nvs_flash
+        esp_netif
+        freertos
+)

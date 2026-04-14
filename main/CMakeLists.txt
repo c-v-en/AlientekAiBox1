@@ -1,0 +1,21 @@
+idf_component_register(
+    SRCS 
+        "AlientekAiBox1.c"
+        "app_init.c"
+        "app_event.c"
+        "app_wifi.c"
+        "app_led.c"
+        "led_gpio.c"
+        "app_version.c"
+    INCLUDE_DIRS 
+        "."
+        "${CMAKE_SOURCE_DIR}/components/smartconfig_component/include"
+        "${CMAKE_BINARY_DIR}/generated"
+    REQUIRES
+        esp_wifi
+        smartconfig_component
+        nvs_flash
+        freertos
+        driver
+        esp_driver_gpio
+)

@@ -1,0 +1,24 @@
+menu "AlientekAiBox1 Version"
+
+    config APP_VERSION_MAJOR
+        int "Major version"
+        range 0 999
+        default 1
+        help
+            主版本号，不兼容的硬件/协议变更时递增
+
+    config APP_VERSION_MINOR
+        int "Minor version"
+        range 0 999
+        default 0
+        help
+            次版本号，新增功能时递增
+
+    config APP_VERSION_PATCH
+        int "Patch version"
+        range 0 999
+        default 0
+        help
+            修订号，修复 bug 时递增
+
+endmenu
