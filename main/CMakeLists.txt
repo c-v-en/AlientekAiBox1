@@ -2,7 +2,6 @@ idf_component_register(
     SRCS 
         "AlientekAiBox1.c"
         "app_init.c"
-        "app_event.c"
         "app_wifi.c"
         "app_led.c"
         "led_gpio.c"
@@ -14,6 +13,9 @@ idf_component_register(
     REQUIRES
         esp_wifi
         smartconfig_component
+        app_event_component
+        i2c_bus_component
+        xl9555_component
         nvs_flash
         freertos
         driver

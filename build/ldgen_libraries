@@ -127,11 +127,19 @@ D:/progrms/esp32/smart_config/build/esp-idf/wpa_supplicant/libwpa_supplicant.a
 D:/progrms/esp32/smart_config/build/esp-idf/esp_coex/libesp_coex.a
 D:/progrms/esp32/smart_config/build/esp-idf/esp_wifi/libesp_wifi.a
 D:/progrms/esp32/smart_config/build/esp-idf/smartconfig_component/libsmartconfig_component.a
+D:/progrms/esp32/smart_config/build/esp-idf/app_event_component/libapp_event_component.a
 D:/progrms/esp32/smart_config/build/esp-idf/esp_hal_i2c/libesp_hal_i2c.a
 D:/progrms/esp32/smart_config/build/esp-idf/esp_hal_twai/libesp_hal_twai.a
 D:/progrms/esp32/smart_config/build/esp-idf/driver/libdriver.a
 D:/progrms/esp32/smart_config/build/esp-idf/esp_hal_i2c/libesp_hal_i2c.a
 D:/progrms/esp32/smart_config/build/esp-idf/esp_hal_twai/libesp_hal_twai.a
+D:/progrms/esp32/smart_config/build/esp-idf/esp_driver_i2c/libesp_driver_i2c.a
+D:/progrms/esp32/smart_config/build/esp-idf/i2c_bus_component/libi2c_bus_component.a
+D:/progrms/esp32/smart_config/build/esp-idf/driver/libdriver.a
+D:/progrms/esp32/smart_config/build/esp-idf/esp_driver_i2c/libesp_driver_i2c.a
+D:/progrms/esp32/smart_config/build/esp-idf/xl9555_component/libxl9555_component.a
+D:/progrms/esp32/smart_config/build/esp-idf/i2c_bus_component/libi2c_bus_component.a
+D:/progrms/esp32/smart_config/build/esp-idf/app_event_component/libapp_event_component.a
 D:/progrms/esp32/smart_config/build/esp-idf/http_parser/libhttp_parser.a
 D:/progrms/esp32/smart_config/build/esp-idf/esp-tls/libesp-tls.a
 D:/progrms/esp32/smart_config/build/esp-idf/tcp_transport/libtcp_transport.a
@@ -140,6 +148,6 @@ D:/progrms/esp32/smart_config/build/esp-idf/tcp_transport/libtcp_transport.a
 D:/progrms/esp32/smart_config/build/esp-idf/lvgl__lvgl/liblvgl__lvgl.a
 D:/progrms/esp32/smart_config/build/esp-idf/main/libmain.a
 D:/progrms/esp32/smart_config/build/esp-idf/smartconfig_component/libsmartconfig_component.a
-D:/progrms/esp32/smart_config/build/esp-idf/driver/libdriver.a
+D:/progrms/esp32/smart_config/build/esp-idf/xl9555_component/libxl9555_component.a
 D:/progrms/esp32/smart_config/build/esp-idf/espressif__mqtt/libespressif__mqtt.a
 D:/progrms/esp32/smart_config/build/esp-idf/lvgl__lvgl/liblvgl__lvgl.a

@@ -23,6 +23,9 @@ AlientekAiBox1_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 AlientekAiBox1_SOURCE_DIR:STATIC=D:/progrms/esp32/smart_config
 
+//No help, variable specified on the command line.
+CCACHE_ENABLE:UNINITIALIZED=False
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32s3-elf-addr2line.exe
 
@@ -366,6 +369,9 @@ Mbed TLS_IS_TOP_LEVEL:STATIC=OFF
 Mbed TLS_SOURCE_DIR:STATIC=D:/esp-idf/.espressif/v6.0/esp-idf/components/mbedtls/mbedtls
 
 //No help, variable specified on the command line.
+PYTHON:UNINITIALIZED=C:\Espressif\tools\python\v6.0\venv\Scripts\python.exe
+
+//No help, variable specified on the command line.
 PYTHON_DEPS_CHECKED:UNINITIALIZED=1
 
 //No help, variable specified on the command line.
@@ -582,7 +588,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=94
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=98
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

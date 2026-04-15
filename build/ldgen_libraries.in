@@ -127,11 +127,19 @@ $<TARGET_FILE:idf::wpa_supplicant>
 $<TARGET_FILE:idf::esp_coex>
 $<TARGET_FILE:idf::esp_wifi>
 $<TARGET_FILE:idf::smartconfig_component>
+$<TARGET_FILE:idf::app_event_component>
 $<TARGET_FILE:idf::esp_hal_i2c>
 $<TARGET_FILE:idf::esp_hal_twai>
 $<TARGET_FILE:idf::driver>
 $<TARGET_FILE:__idf_esp_hal_i2c>
 $<TARGET_FILE:__idf_esp_hal_twai>
+$<TARGET_FILE:idf::esp_driver_i2c>
+$<TARGET_FILE:idf::i2c_bus_component>
+$<TARGET_FILE:__idf_driver>
+$<TARGET_FILE:__idf_esp_driver_i2c>
+$<TARGET_FILE:idf::xl9555_component>
+$<TARGET_FILE:__idf_i2c_bus_component>
+$<TARGET_FILE:__idf_app_event_component>
 $<TARGET_FILE:idf::http_parser>
 $<TARGET_FILE:idf::esp-tls>
 $<TARGET_FILE:idf::tcp_transport>
@@ -140,6 +148,6 @@ $<TARGET_FILE:__idf_tcp_transport>
 $<TARGET_FILE:idf::lvgl__lvgl>
 $<TARGET_FILE:idf::main>
 $<TARGET_FILE:__idf_smartconfig_component>
-$<TARGET_FILE:__idf_driver>
+$<TARGET_FILE:__idf_xl9555_component>
 $<TARGET_FILE:__idf_espressif__mqtt>
 $<TARGET_FILE:__idf_lvgl__lvgl>

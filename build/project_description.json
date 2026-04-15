@@ -1,7 +1,7 @@
 {
     "version":            "1.3",
     "project_name":       "AlientekAiBox1",
-    "project_version":    "1",
+    "project_version":    "bd53f88-dirty",
     "project_path":       "D:/progrms/esp32/smart_config",
     "idf_path":           "D:/esp-idf/.espressif/v6.0/esp-idf",
     "build_dir":          "D:/progrms/esp32/smart_config/build",
@@ -21,13 +21,28 @@
     "monitor_toolprefix": "xtensa-esp32s3-elf-",
     "c_compiler":         "C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc.exe",
     "config_environment" : {
-        "COMPONENT_KCONFIGS" : "D:/esp-idf/.espressif/v6.0/esp-idf/components/driver/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/efuse/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp-tls/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_coex/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_common/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_dma/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_gpio/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_uart/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_usb_serial_jtag/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_event/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hw_support/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_libc/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_mm/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_netif/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_partition/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_phy/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_pm/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_psram/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_ringbuf/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_rom/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_security/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_stdio/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_system/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_timer/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_wifi/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/freertos/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/hal/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/heap/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/log/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/lwip/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/mbedtls/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/nvs_flash/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/nvs_sec_provider/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/pthread/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/soc/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/spi_flash/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/tcp_transport/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/vfs/Kconfig;D:/progrms/esp32/smart_config/components/smartconfig_component/Kconfig;D:/progrms/esp32/smart_config/managed_components/espressif__mqtt/Kconfig;D:/progrms/esp32/smart_config/managed_components/lvgl__lvgl/Kconfig",
+        "COMPONENT_KCONFIGS" : "D:/esp-idf/.espressif/v6.0/esp-idf/components/driver/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/efuse/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp-tls/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_coex/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_common/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_dma/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_gpio/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_i2c/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_uart/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_usb_serial_jtag/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_event/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hw_support/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_libc/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_mm/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_netif/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_partition/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_phy/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_pm/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_psram/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_ringbuf/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_rom/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_security/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_stdio/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_system/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_timer/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_wifi/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/freertos/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/hal/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/heap/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/log/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/lwip/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/mbedtls/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/nvs_flash/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/nvs_sec_provider/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/pthread/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/soc/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/spi_flash/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/tcp_transport/Kconfig;D:/esp-idf/.espressif/v6.0/esp-idf/components/vfs/Kconfig;D:/progrms/esp32/smart_config/components/smartconfig_component/Kconfig;D:/progrms/esp32/smart_config/managed_components/espressif__mqtt/Kconfig;D:/progrms/esp32/smart_config/managed_components/lvgl__lvgl/Kconfig",
         "COMPONENT_KCONFIGS_PROJBUILD" : "D:/esp-idf/.espressif/v6.0/esp-idf/components/bootloader/Kconfig.projbuild;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_app_format/Kconfig.projbuild;D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_rom/Kconfig.projbuild;D:/esp-idf/.espressif/v6.0/esp-idf/components/esptool_py/Kconfig.projbuild;D:/esp-idf/.espressif/v6.0/esp-idf/components/partition_table/Kconfig.projbuild;D:/progrms/esp32/smart_config/main/Kconfig.projbuild"
     },
     "common_component_reqs": [ "cxx", "esp_libc", "freertos", "esp_hw_support", "heap", "log", "soc", "hal", "esp_rom", "esp_common", "esp_system", "esp_stdio", "xtensa" ],
-    "build_components" : [ "app_update", "bootloader", "bootloader_support", "cxx", "driver", "efuse", "esp-tls", "esp_app_format", "esp_blockdev", "esp_bootloader_format", "esp_coex", "esp_common", "esp_driver_dma", "esp_driver_gpio", "esp_driver_uart", "esp_driver_usb_serial_jtag", "esp_event", "esp_hal_ana_conv", "esp_hal_clock", "esp_hal_dma", "esp_hal_gpio", "esp_hal_gpspi", "esp_hal_i2c", "esp_hal_i2s", "esp_hal_mspi", "esp_hal_pmu", "esp_hal_rtc_timer", "esp_hal_security", "esp_hal_timg", "esp_hal_touch_sens", "esp_hal_twai", "esp_hal_uart", "esp_hal_usb", "esp_hal_wdt", "esp_hw_support", "esp_libc", "esp_mm", "esp_netif", "esp_netif_stack", "esp_partition", "esp_phy", "esp_pm", "esp_psram", "esp_ringbuf", "esp_rom", "esp_security", "esp_stdio", "esp_system", "esp_timer", "esp_usb_cdc_rom_console", "esp_wifi", "espressif__mqtt", "esptool_py", "freertos", "hal", "heap", "http_parser", "log", "lvgl__lvgl", "lwip", "main", "mbedtls", "nvs_flash", "nvs_sec_provider", "partition_table", "pthread", "smartconfig_component", "soc", "spi_flash", "tcp_transport", "vfs", "wpa_supplicant", "xtensa", "" ],
-    "build_component_paths" : [ "D:/esp-idf/.espressif/v6.0/esp-idf/components/app_update", "D:/esp-idf/.espressif/v6.0/esp-idf/components/bootloader", "D:/esp-idf/.espressif/v6.0/esp-idf/components/bootloader_support", "D:/esp-idf/.espressif/v6.0/esp-idf/components/cxx", "D:/esp-idf/.espressif/v6.0/esp-idf/components/driver", "D:/esp-idf/.espressif/v6.0/esp-idf/components/efuse", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp-tls", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_app_format", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_blockdev", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_bootloader_format", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_coex", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_common", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_dma", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_gpio", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_uart", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_usb_serial_jtag", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_event", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_ana_conv", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_clock", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_dma", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_gpio", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_gpspi", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_i2c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_i2s", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_mspi", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_pmu", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_rtc_timer", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_security", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_timg", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_touch_sens", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_twai", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_uart", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_usb", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_wdt", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hw_support", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_libc", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_mm", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_netif", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_netif_stack", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_partition", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_phy", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_pm", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_psram", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_ringbuf", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_rom", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_security", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_stdio", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_system", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_timer", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_usb_cdc_rom_console", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_wifi", "D:/progrms/esp32/smart_config/managed_components/espressif__mqtt", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esptool_py", "D:/esp-idf/.espressif/v6.0/esp-idf/components/freertos", "D:/esp-idf/.espressif/v6.0/esp-idf/components/hal", "D:/esp-idf/.espressif/v6.0/esp-idf/components/heap", "D:/esp-idf/.espressif/v6.0/esp-idf/components/http_parser", "D:/esp-idf/.espressif/v6.0/esp-idf/components/log", "D:/progrms/esp32/smart_config/managed_components/lvgl__lvgl", "D:/esp-idf/.espressif/v6.0/esp-idf/components/lwip", "D:/progrms/esp32/smart_config/main", "D:/esp-idf/.espressif/v6.0/esp-idf/components/mbedtls", "D:/esp-idf/.espressif/v6.0/esp-idf/components/nvs_flash", "D:/esp-idf/.espressif/v6.0/esp-idf/components/nvs_sec_provider", "D:/esp-idf/.espressif/v6.0/esp-idf/components/partition_table", "D:/esp-idf/.espressif/v6.0/esp-idf/components/pthread", "D:/progrms/esp32/smart_config/components/smartconfig_component", "D:/esp-idf/.espressif/v6.0/esp-idf/components/soc", "D:/esp-idf/.espressif/v6.0/esp-idf/components/spi_flash", "D:/esp-idf/.espressif/v6.0/esp-idf/components/tcp_transport", "D:/esp-idf/.espressif/v6.0/esp-idf/components/vfs", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant", "D:/esp-idf/.espressif/v6.0/esp-idf/components/xtensa", "" ],
+    "build_components" : [ "app_event_component", "app_update", "bootloader", "bootloader_support", "cxx", "driver", "efuse", "esp-tls", "esp_app_format", "esp_blockdev", "esp_bootloader_format", "esp_coex", "esp_common", "esp_driver_dma", "esp_driver_gpio", "esp_driver_i2c", "esp_driver_uart", "esp_driver_usb_serial_jtag", "esp_event", "esp_hal_ana_conv", "esp_hal_clock", "esp_hal_dma", "esp_hal_gpio", "esp_hal_gpspi", "esp_hal_i2c", "esp_hal_i2s", "esp_hal_mspi", "esp_hal_pmu", "esp_hal_rtc_timer", "esp_hal_security", "esp_hal_timg", "esp_hal_touch_sens", "esp_hal_twai", "esp_hal_uart", "esp_hal_usb", "esp_hal_wdt", "esp_hw_support", "esp_libc", "esp_mm", "esp_netif", "esp_netif_stack", "esp_partition", "esp_phy", "esp_pm", "esp_psram", "esp_ringbuf", "esp_rom", "esp_security", "esp_stdio", "esp_system", "esp_timer", "esp_usb_cdc_rom_console", "esp_wifi", "espressif__mqtt", "esptool_py", "freertos", "hal", "heap", "http_parser", "i2c_bus_component", "log", "lvgl__lvgl", "lwip", "main", "mbedtls", "nvs_flash", "nvs_sec_provider", "partition_table", "pthread", "smartconfig_component", "soc", "spi_flash", "tcp_transport", "vfs", "wpa_supplicant", "xl9555_component", "xtensa", "" ],
+    "build_component_paths" : [ "D:/progrms/esp32/smart_config/components/app_event_component", "D:/esp-idf/.espressif/v6.0/esp-idf/components/app_update", "D:/esp-idf/.espressif/v6.0/esp-idf/components/bootloader", "D:/esp-idf/.espressif/v6.0/esp-idf/components/bootloader_support", "D:/esp-idf/.espressif/v6.0/esp-idf/components/cxx", "D:/esp-idf/.espressif/v6.0/esp-idf/components/driver", "D:/esp-idf/.espressif/v6.0/esp-idf/components/efuse", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp-tls", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_app_format", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_blockdev", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_bootloader_format", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_coex", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_common", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_dma", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_gpio", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_i2c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_uart", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_usb_serial_jtag", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_event", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_ana_conv", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_clock", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_dma", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_gpio", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_gpspi", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_i2c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_i2s", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_mspi", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_pmu", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_rtc_timer", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_security", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_timg", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_touch_sens", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_twai", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_uart", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_usb", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hal_wdt", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_hw_support", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_libc", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_mm", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_netif", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_netif_stack", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_partition", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_phy", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_pm", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_psram", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_ringbuf", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_rom", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_security", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_stdio", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_system", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_timer", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_usb_cdc_rom_console", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_wifi", "D:/progrms/esp32/smart_config/managed_components/espressif__mqtt", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esptool_py", "D:/esp-idf/.espressif/v6.0/esp-idf/components/freertos", "D:/esp-idf/.espressif/v6.0/esp-idf/components/hal", "D:/esp-idf/.espressif/v6.0/esp-idf/components/heap", "D:/esp-idf/.espressif/v6.0/esp-idf/components/http_parser", "D:/progrms/esp32/smart_config/components/i2c_bus_component", "D:/esp-idf/.espressif/v6.0/esp-idf/components/log", "D:/progrms/esp32/smart_config/managed_components/lvgl__lvgl", "D:/esp-idf/.espressif/v6.0/esp-idf/components/lwip", "D:/progrms/esp32/smart_config/main", "D:/esp-idf/.espressif/v6.0/esp-idf/components/mbedtls", "D:/esp-idf/.espressif/v6.0/esp-idf/components/nvs_flash", "D:/esp-idf/.espressif/v6.0/esp-idf/components/nvs_sec_provider", "D:/esp-idf/.espressif/v6.0/esp-idf/components/partition_table", "D:/esp-idf/.espressif/v6.0/esp-idf/components/pthread", "D:/progrms/esp32/smart_config/components/smartconfig_component", "D:/esp-idf/.espressif/v6.0/esp-idf/components/soc", "D:/esp-idf/.espressif/v6.0/esp-idf/components/spi_flash", "D:/esp-idf/.espressif/v6.0/esp-idf/components/tcp_transport", "D:/esp-idf/.espressif/v6.0/esp-idf/components/vfs", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant", "D:/progrms/esp32/smart_config/components/xl9555_component", "D:/esp-idf/.espressif/v6.0/esp-idf/components/xtensa", "" ],
     "build_component_info" : {
+        "app_event_component": {
+            "alias": "idf::app_event_component",
+            "target": "___idf_app_event_component",
+            "prefix": "idf",
+            "dir": "D:/progrms/esp32/smart_config/components/app_event_component",
+            "type": "LIBRARY",
+            "lib": "__idf_app_event_component",
+            "reqs": [ "freertos" ],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "D:/progrms/esp32/smart_config/build/esp-idf/app_event_component/libapp_event_component.a",
+            "sources": [ "D:/progrms/esp32/smart_config/components/app_event_component/src/app_event.c" ],
+            "include_dirs": [ "include" ]
+        },
         "app_update": {
             "alias": "idf::app_update",
             "target": "___idf_app_update",
@@ -236,6 +251,21 @@
             "managed_priv_reqs": [],
             "file": "D:/progrms/esp32/smart_config/build/esp-idf/esp_driver_gpio/libesp_driver_gpio.a",
             "sources": [ "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_gpio/src/gpio.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_gpio/src/gpio_glitch_filter_ops.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_gpio/src/rtc_io.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_gpio/src/dedic_gpio.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_gpio/src/gpio_pin_glitch_filter.c" ],
+            "include_dirs": [ "include" ]
+        },
+        "esp_driver_i2c": {
+            "alias": "idf::esp_driver_i2c",
+            "target": "___idf_esp_driver_i2c",
+            "prefix": "idf",
+            "dir": "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_i2c",
+            "type": "LIBRARY",
+            "lib": "__idf_esp_driver_i2c",
+            "reqs": [ "esp_hal_i2c" ],
+            "priv_reqs": [ "esp_driver_gpio", "esp_pm", "esp_ringbuf" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "D:/progrms/esp32/smart_config/build/esp-idf/esp_driver_i2c/libesp_driver_i2c.a",
+            "sources": [ "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_i2c/i2c_master.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_i2c/i2c_common.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/esp_driver_i2c/i2c_slave.c" ],
             "include_dirs": [ "include" ]
         },
         "esp_driver_uart": {
@@ -883,6 +913,21 @@
             "sources": [ "D:/esp-idf/.espressif/v6.0/esp-idf/components/http_parser/http_parser.c" ],
             "include_dirs": [ "." ]
         },
+        "i2c_bus_component": {
+            "alias": "idf::i2c_bus_component",
+            "target": "___idf_i2c_bus_component",
+            "prefix": "idf",
+            "dir": "D:/progrms/esp32/smart_config/components/i2c_bus_component",
+            "type": "LIBRARY",
+            "lib": "__idf_i2c_bus_component",
+            "reqs": [ "driver", "esp_driver_i2c", "esp_driver_gpio" ],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "D:/progrms/esp32/smart_config/build/esp-idf/i2c_bus_component/libi2c_bus_component.a",
+            "sources": [ "D:/progrms/esp32/smart_config/components/i2c_bus_component/src/i2c_bus_esp32.c" ],
+            "include_dirs": [ "include" ]
+        },
         "log": {
             "alias": "idf::log",
             "target": "___idf_log",
@@ -935,12 +980,12 @@
             "dir": "D:/progrms/esp32/smart_config/main",
             "type": "LIBRARY",
             "lib": "__idf_main",
-            "reqs": [ "esp_wifi", "smartconfig_component", "nvs_flash", "freertos", "driver", "esp_driver_gpio" ],
+            "reqs": [ "esp_wifi", "smartconfig_component", "app_event_component", "i2c_bus_component", "xl9555_component", "nvs_flash", "freertos", "driver", "esp_driver_gpio" ],
             "priv_reqs": [ "espressif__mqtt", "lvgl__lvgl" ],
             "managed_reqs": [],
             "managed_priv_reqs": [ "espressif__mqtt", "lvgl__lvgl" ],
             "file": "D:/progrms/esp32/smart_config/build/esp-idf/main/libmain.a",
-            "sources": [ "D:/progrms/esp32/smart_config/main/AlientekAiBox1.c", "D:/progrms/esp32/smart_config/main/app_init.c", "D:/progrms/esp32/smart_config/main/app_event.c", "D:/progrms/esp32/smart_config/main/app_wifi.c", "D:/progrms/esp32/smart_config/main/app_led.c", "D:/progrms/esp32/smart_config/main/led_gpio.c", "D:/progrms/esp32/smart_config/main/app_version.c" ],
+            "sources": [ "D:/progrms/esp32/smart_config/main/AlientekAiBox1.c", "D:/progrms/esp32/smart_config/main/app_init.c", "D:/progrms/esp32/smart_config/main/app_wifi.c", "D:/progrms/esp32/smart_config/main/app_led.c", "D:/progrms/esp32/smart_config/main/led_gpio.c", "D:/progrms/esp32/smart_config/main/app_version.c" ],
             "include_dirs": [ ".", "D:/progrms/esp32/smart_config/components/smartconfig_component/include", "D:/progrms/esp32/smart_config/build/generated" ]
         },
         "mbedtls": {
@@ -1107,6 +1152,21 @@
             "file": "D:/progrms/esp32/smart_config/build/esp-idf/wpa_supplicant/libwpa_supplicant.a",
             "sources": [ "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/port/os_xtensa.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/port/eloop.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/ap/ap_config.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/ap/ieee802_1x.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/ap/wpa_auth.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/ap/wpa_auth_ie.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/ap/pmksa_cache_auth.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/ap/sta_info.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/ap/ieee802_11.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/ap/comeback_token.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/common/sae.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/common/dragonfly.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/common/wpa_common.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/utils/bitfield.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/crypto/aes-siv.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/crypto/sha256-kdf.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/crypto/ccmp.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/crypto/aes-gcm.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/crypto/crypto_ops.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/crypto/dh_group5.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/crypto/dh_groups.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/crypto/ms_funcs.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/crypto/sha1-tlsprf.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/crypto/sha256-tlsprf.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/crypto/sha384-tlsprf.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/crypto/sha256-prf.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/crypto/sha1-prf.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/crypto/sha384-prf.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/crypto/md4-internal.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/crypto/sha1-tprf.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/eap_common/eap_wsc_common.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/common/ieee802_11_common.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/eap_peer/chap.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/eap_peer/eap.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/eap_peer/eap_common.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/eap_peer/eap_mschapv2.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/eap_peer/eap_peap.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/eap_peer/eap_peap_common.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/eap_peer/eap_tls.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/eap_peer/eap_tls_common.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/eap_peer/eap_ttls.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/eap_peer/mschapv2.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/eap_peer/eap_fast.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/eap_peer/eap_fast_common.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/eap_peer/eap_fast_pac.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/rsn_supp/pmksa_cache.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/rsn_supp/wpa.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/rsn_supp/wpa_ie.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/utils/base64.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/utils/common.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/utils/ext_password.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/utils/uuid.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/utils/wpabuf.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/utils/wpa_debug.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/utils/json.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/wps/wps.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/wps/wps_attr_build.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/wps/wps_attr_parse.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/wps/wps_attr_process.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/wps/wps_common.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/wps/wps_dev_attr.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/wps/wps_enrollee.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/common/sae_pk.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_eap_client.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wpa2_api_port.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wpa_main.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wpas_glue.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_common.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wps.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_wpa3.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_owe.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/esp_supplicant/src/esp_hostap.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/tls_mbedtls.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/crypto_mbedtls.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/crypto_mbedtls-bignum.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/crypto_mbedtls-rsa.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/crypto_mbedtls-ec.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/fastpsk.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/crypto/rc4.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/crypto/des-internal.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/esp_supplicant/src/crypto/fastpbkdf2.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/crypto/aes-wrap.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/crypto/aes-unwrap.c", "D:/esp-idf/.espressif/v6.0/esp-idf/components/wpa_supplicant/src/crypto/aes-ccm.c" ],
             "include_dirs": [ "include", "port/include", "esp_supplicant/include" ]
+        },
+        "xl9555_component": {
+            "alias": "idf::xl9555_component",
+            "target": "___idf_xl9555_component",
+            "prefix": "idf",
+            "dir": "D:/progrms/esp32/smart_config/components/xl9555_component",
+            "type": "LIBRARY",
+            "lib": "__idf_xl9555_component",
+            "reqs": [ "i2c_bus_component", "app_event_component", "driver", "freertos", "esp_driver_gpio" ],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "file": "D:/progrms/esp32/smart_config/build/esp-idf/xl9555_component/libxl9555_component.a",
+            "sources": [ "D:/progrms/esp32/smart_config/components/xl9555_component/src/xl9555_component.c", "D:/progrms/esp32/smart_config/components/xl9555_component/src/xl9555_event.c" ],
+            "include_dirs": [ "include" ]
         },
         "xtensa": {
             "alias": "idf::xtensa",
@@ -2913,11 +2973,37 @@
             "dir": "D:/progrms/esp32/smart_config/main",
             "source": "project_components",
             "lib": "__idf_main",
-            "reqs": [ "esp_wifi", "smartconfig_component", "nvs_flash", "freertos", "driver", "esp_driver_gpio" ],
+            "reqs": [ "esp_wifi", "smartconfig_component", "app_event_component", "i2c_bus_component", "xl9555_component", "nvs_flash", "freertos", "driver", "esp_driver_gpio" ],
             "priv_reqs": [ "espressif__mqtt", "lvgl__lvgl" ],
             "managed_reqs": [],
             "managed_priv_reqs": [ "espressif__mqtt", "lvgl__lvgl" ],
             "include_dirs": [ ".", "D:/progrms/esp32/smart_config/components/smartconfig_component/include", "D:/progrms/esp32/smart_config/build/generated" ]
+        },
+        "app_event_component": {
+            "alias": "idf::app_event_component",
+            "target": "___idf_app_event_component",
+            "prefix": "idf",
+            "dir": "D:/progrms/esp32/smart_config/components/app_event_component",
+            "source": "project_components",
+            "lib": "__idf_app_event_component",
+            "reqs": [ "freertos" ],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "i2c_bus_component": {
+            "alias": "idf::i2c_bus_component",
+            "target": "___idf_i2c_bus_component",
+            "prefix": "idf",
+            "dir": "D:/progrms/esp32/smart_config/components/i2c_bus_component",
+            "source": "project_components",
+            "lib": "__idf_i2c_bus_component",
+            "reqs": [ "driver", "esp_driver_i2c", "esp_driver_gpio" ],
+            "priv_reqs": [],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
         },
         "smartconfig_component": {
             "alias": "idf::smartconfig_component",
@@ -2928,6 +3014,19 @@
             "lib": "__idf_smartconfig_component",
             "reqs": [],
             "priv_reqs": [ "esp_wifi", "wpa_supplicant", "nvs_flash", "esp_netif", "freertos" ],
+            "managed_reqs": [],
+            "managed_priv_reqs": [],
+            "include_dirs": [ "include" ]
+        },
+        "xl9555_component": {
+            "alias": "idf::xl9555_component",
+            "target": "___idf_xl9555_component",
+            "prefix": "idf",
+            "dir": "D:/progrms/esp32/smart_config/components/xl9555_component",
+            "source": "project_components",
+            "lib": "__idf_xl9555_component",
+            "reqs": [ "i2c_bus_component", "app_event_component", "driver", "freertos", "esp_driver_gpio" ],
+            "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": [ "include" ]

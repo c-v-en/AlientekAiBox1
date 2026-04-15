@@ -1,0 +1,260 @@
+<mxfile host="65bd71144e">
+    <diagram id="jL3KaXbntwASir9wvn62" name="第 1 页">
+        <mxGraphModel dx="830" dy="779" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;b&gt;AlientekAiBox1 V1.0 系统架构图&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontColor=#1a1a1a;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="20" width="400" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;arcSize=6;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="80" width="240" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="应用入口层 (App Entry)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#01579b;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="85" width="240" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;b&gt;AlientekAiBox1.c&lt;/b&gt;&lt;br&gt;app_main() → app_init_task&lt;br&gt;Priority: 5 | Stack: 4KB" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="105" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#2e7d32;arcSize=6;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="170" width="400" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="初始化层 (App Init) — 顺序初始化后自删除" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#2e7d32;" parent="1" vertex="1">
+                    <mxGeometry x="600" y="175" width="400" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="NVS Flash → Event System → WiFi Manager → LED Manager" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="620" y="200" width="360" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="发布 APP_EVENT_INIT_DONE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffebee;strokeColor=#c62828;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="225" width="200" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8e1;strokeColor=#f57f17;arcSize=6;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="280" width="1520" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="核心服务层 (Core Services)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#f57f17;" parent="1" vertex="1">
+                    <mxGeometry x="55" y="285" width="300" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#880e4f;arcSize=4;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="310" width="260" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;b&gt;app_event.c&lt;/b&gt; — 事件分发总线" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#880e4f;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="315" width="260" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="• 优先队列 (32 slots)&lt;br&gt;• 最大 10 个监听器&lt;br&gt;• Task Priority: 4 | Stack: 4KB" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="75" y="340" width="230" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="WiFi Events | Prov Events | Key Events | Sys Events" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="75" y="390" width="230" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="post / post_simple / register_listener" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8bbd0;strokeColor=#880e4f;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="80" y="430" width="220" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#0d47a1;arcSize=4;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="310" width="320" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="&lt;b&gt;app_wifi.c&lt;/b&gt; — WiFi 管理器" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#0d47a1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="315" width="320" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="状态机: IDLE → CONNECTING / PROVISIONING → CONNECTED&lt;br&gt;配网超时: 120s | 重试延时: 5s&lt;br&gt;封装 SmartConfig Component" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="375" y="340" width="290" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="init | start | stop | start_provisioning | clear_config | get_ssid" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bbdefb;strokeColor=#0d47a1;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="375" y="430" width="290" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="配网超时定时器 (FreeRTOS Timer)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff;strokeColor=#0d47a1;fontSize=9;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="375" y="455" width="290" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#4a148c;arcSize=4;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="310" width="260" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="&lt;b&gt;app_led.c&lt;/b&gt; — LED 管理器" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#4a148c;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="315" width="260" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="GPIO4 系统状态指示灯&lt;br&gt;Task Priority: 1 (最低) | Stack: 2KB&lt;br&gt;监听事件: PROV_START / WIFI_CONNECTED / PROV_TIMEOUT" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="735" y="340" width="230" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="IDLE(1Hz) — PROVISIONING(5Hz) — PROV_TIMEOUT(1Hz)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="735" y="400" width="230" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="init | start | set_state" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1bee7;strokeColor=#4a148c;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="740" y="430" width="220" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="使用 led_driver.h + led_gpio.c" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff;strokeColor=#4a148c;fontSize=9;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="740" y="455" width="220" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede7f6;strokeColor=#311b92;arcSize=4;" parent="1" vertex="1">
+                    <mxGeometry x="1020" y="310" width="240" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="&lt;b&gt;LED 驱动抽象层&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#311b92;" parent="1" vertex="1">
+                    <mxGeometry x="1020" y="315" width="240" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="&lt;b&gt;led_driver.h&lt;/b&gt;&lt;br&gt;面向对象驱动接口 (C中的虚函数表)&lt;br&gt;led_device_t + led_driver_iface_t&lt;br&gt;&lt;br&gt;&lt;b&gt;led_gpio.c&lt;/b&gt;&lt;br&gt;GPIO 驱动实现 (esp_driver_gpio)&lt;br&gt;支持 active_low / active_high" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="1035" y="340" width="210" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="init | on | off | toggle | is_on" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d1c4e9;strokeColor=#311b92;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="1035" y="445" width="210" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="&lt;b&gt;按键管理器 (预留)&lt;/b&gt;&lt;br&gt;app_event.h 已定义 KEY0/KEY1 事件&lt;br&gt;SHORT / LONG / DOUBLE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff;strokeColor=#607d8b;fontSize=10;dashed=1;dashPattern=1 1;" parent="1" vertex="1">
+                    <mxGeometry x="1300" y="310" width="230" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f7fa;strokeColor=#006064;arcSize=6;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="520" width="1520" height="280" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="SmartConfig 组件层 (components/smartconfig_component) — 面向对象 / 依赖注入 / 观察者模式" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#006064;" parent="1" vertex="1">
+                    <mxGeometry x="55" y="525" width="700" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b2ebf2;strokeColor=#006064;arcSize=4;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="550" width="600" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="&lt;b&gt;smartconfig_component.c — 核心组件&lt;/b&gt; | sc_component_t (OO in C)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#006064;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="555" width="600" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="生命周期: create → init → start/stop → destroy&lt;br&gt;状态机: IDLE → STARTING → SCANNING → FOUND_CHANNEL → GETTING_SSID_PSWD → CONNECTING → CONNECTED/FAILED/STOPPED&lt;br&gt;同步: Mutex + EventGroup | 观察者: 5 slots | Task Priority: 3 | Stack: 4KB | auto_save_wifi / auto_reconnect" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="515" y="580" width="570" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="create | init | start | stop | attach_observer | connect_saved | has_saved_wifi | clear_wifi | get_status" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#80deea;strokeColor=#006064;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="515" y="640" width="570" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="&lt;b&gt;内部通信接口&lt;/b&gt; (smartconfig_component_internal.h)&lt;br&gt;sc_internal_on_got_ssid_pswd | sc_internal_on_driver_status | sc_internal_on_wifi_connected | sc_internal_on_wifi_disconnected" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2f1;strokeColor=#006064;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="515" y="670" width="570" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="内部事件: START | STOP | CONNECTED | FAILED | TIMEOUT | GOT_SSID_PSWD" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2f1;strokeColor=#006064;fontSize=9;" parent="1" vertex="1">
+                    <mxGeometry x="515" y="712" width="570" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="依赖注入: driver_iface_t + storage_iface_t + wifi_iface_t" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4dd0e1;strokeColor=#006064;fontSize=9;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="515" y="742" width="570" height="22" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#e65100;arcSize=4;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="550" width="200" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="&lt;b&gt;配网驱动&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#e65100;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="555" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="&lt;b&gt;sc_driver_esptouch.c&lt;/b&gt;&lt;br&gt;策略: SC_TYPE_ESPTOUCH&lt;br&gt;状态: SCANNING → FOUND_CHANNEL → GOT_SSID_PSWD&lt;br&gt;事件: SC_EVENT (ESP-IDF SmartConfig)&lt;br&gt;&lt;br&gt;API:&lt;br&gt;init / start / stop / get_status&lt;br&gt;&lt;br&gt;Context:&lt;br&gt;esptouch_ctx_t (component ref)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="75" y="575" width="170" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#558b2f;arcSize=4;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="550" width="180" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="&lt;b&gt;存储后端&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#558b2f;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="555" width="180" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="&lt;b&gt;sc_storage_nvs.c&lt;/b&gt;&lt;br&gt;后端: NVS Flash&lt;br&gt;Namespace: &quot;smartconfig&quot;&lt;br&gt;Key: &quot;wifi_config&quot;&lt;br&gt;&lt;br&gt;API:&lt;br&gt;init / load / save / clear / has_config&lt;br&gt;&lt;br&gt;Context:&lt;br&gt;nvs_storage_ctx_t (handle)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="575" width="160" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8eaf6;strokeColor=#283593;arcSize=4;" parent="1" vertex="1">
+                    <mxGeometry x="1130" y="550" width="200" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="&lt;b&gt;WiFi 管理&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=12;fontColor=#283593;" parent="1" vertex="1">
+                    <mxGeometry x="1130" y="555" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="&lt;b&gt;sc_wifi_esp32.c&lt;/b&gt;&lt;br&gt;平台: ESP32 STA Mode&lt;br&gt;事件: WIFI_EVENT + IP_EVENT&lt;br&gt;IP_EVENT_STA_GOT_IP → connected&lt;br&gt;&lt;br&gt;API:&lt;br&gt;init / connect / disconnect / is_connected&lt;br&gt;&lt;br&gt;Context:&lt;br&gt;esp32_wifi_ctx_t (component ref)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="1145" y="575" width="170" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eceff1;strokeColor=#455a64;arcSize=6;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="820" width="1520" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="硬件抽象层 (ESP-IDF HAL)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1;fontColor=#455a64;" parent="1" vertex="1">
+                    <mxGeometry x="55" y="825" width="300" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="FreeRTOS (Tasks, Timers, Queues, EventGroups, Mutex)  |  esp_wifi  |  esp_smartconfig  |  nvs_flash  |  esp_driver_gpio  |  esp_netif  |  wpa_supplicant" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="60" y="850" width="1480" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#424242;" parent="1" source="5" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#c62828;dashed=1;dashPattern=1 1;" parent="1" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="190" y="290"/>
+                        </Array>
+                        <mxPoint x="520" y="290" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0d47a1;" parent="1" source="6" target="17" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="800" y="290"/>
+                            <mxPoint x="520" y="290"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4a148c;" parent="1" source="6" target="22" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="800" y="290"/>
+                            <mxPoint x="850" y="290"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="58" value="发布事件" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#c62828;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=9;" parent="1" source="17" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="订阅事件" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#c62828;exitX=0.537;exitY=1.003;exitDx=0;exitDy=0;fontSize=9;exitPerimeter=0;" parent="1" source="22" target="12" edge="1">
+                    <mxGeometry x="0.1723" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                        <Array as="points">
+                            <mxPoint x="860" y="510"/>
+                            <mxPoint x="170" y="510"/>
+                        </Array>
+                        <mxPoint x="600" y="482.49" as="sourcePoint"/>
+                        <mxPoint x="170" y="487.49" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#311b92;" parent="1" source="22" target="28" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#455a64;" parent="1" source="28" target="51" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1140" y="530"/>
+                            <mxPoint x="1420" y="530"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="62" value="封装调用" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#006064;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=9;" parent="1" source="17" target="35" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="driver_iface_t" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#e65100;fontSize=9;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="770" y="790"/>
+                            <mxPoint x="160" y="790"/>
+                        </Array>
+                        <mxPoint x="770" y="780" as="sourcePoint"/>
+                        <mxPoint x="160" y="780" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="64" value="storage_iface_t" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#558b2f;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=9;" parent="1" source="35" target="45" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="wifi_iface_t" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#283593;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=9;" parent="1" source="35" target="48" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#455a64;" parent="1" source="42" target="51" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#455a64;" parent="1" source="45" target="51" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#455a64;" parent="1" source="48" target="51" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="&lt;b&gt;设计模式总结&lt;/b&gt;&lt;br&gt;• 依赖注入 (DI): SmartConfig 组件通过接口注入 Driver / Storage / WiFi&lt;br&gt;• 观察者模式: sc_component_attach_observer() 支持最多 5 个观察者&lt;br&gt;• 事件驱动: app_event 作为全局事件总线，解耦 WiFi 与 LED&lt;br&gt;• 面向对象 C: LED Device 和 SC Component 均使用 struct + vtable 模拟类" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff9c4;strokeColor=#f9a825;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="1300" y="410" width="240" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="事件总线 (预留扩展)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#c62828;exitX=0.338;exitY=1.089;exitDx=0;exitDy=0;fontSize=9;dashed=1;dashPattern=1 1;exitPerimeter=0;" parent="1" source="11" target="32" edge="1">
+                    <mxGeometry x="0.4554" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                        <Array as="points">
+                            <mxPoint x="156" y="265"/>
+                            <mxPoint x="1410" y="265"/>
+                        </Array>
+                        <mxPoint x="430" y="280" as="sourcePoint"/>
+                        <mxPoint x="1410" y="235" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
