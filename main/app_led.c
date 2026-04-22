@@ -144,7 +144,7 @@ esp_err_t app_led_start(void) {
     
     s_led_mgr.running = true;
     
-    BaseType_t ret = xTaskCreate(led_task, "led_task", 2048, NULL, 1, &s_led_mgr.task);
+    BaseType_t ret = xTaskCreatePinnedToCore(led_task, "led_task", 2048, NULL, 1, &s_led_mgr.task, 1);
     if (ret != pdPASS) {
         s_led_mgr.running = false;
         return ESP_FAIL;

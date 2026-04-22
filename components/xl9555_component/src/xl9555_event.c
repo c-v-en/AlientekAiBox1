@@ -100,7 +100,7 @@ esp_err_t xl9555_key_event_start(xl9555_dev_t *dev)
     gpio_isr_handler_add(int_gpio, xl9555_int_isr_handler, (void *)(uint32_t)int_gpio);
 
     /* 启动按键任务 */
-    BaseType_t ret = xTaskCreate(xl9555_key_task, "xl9555_key", 2048, dev, 2, &s_key_task);
+    BaseType_t ret = xTaskCreatePinnedToCore(xl9555_key_task, "xl9555_key", 2048, dev, 2, &s_key_task, 1);
     if (ret != pdPASS) {
         vQueueDelete(s_int_queue);
         s_int_queue = NULL;

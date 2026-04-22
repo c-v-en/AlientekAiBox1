@@ -2,6 +2,8 @@
 #define I2C_BUS_COMPONENT_H
 
 #include "esp_err.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/semphr.h"
 #include <stdint.h>
 #include <stddef.h>
 
@@ -26,6 +28,7 @@ struct i2c_bus_dev {
     const i2c_bus_iface_t *driver;
     void *driver_ctx;
     bool initialized;
+    SemaphoreHandle_t mutex;
 };
 
 /* 工厂方法 */
@@ -43,18 +46,27 @@ static inline esp_err_t i2c_bus_deinit(i2c_bus_dev_t *bus) {
 static inline esp_err_t i2c_bus_read_reg(i2c_bus_dev_t *bus, uint8_t addr,
                                          uint8_t reg, uint8_t *data, size_t len) {
     if (!bus || !bus->driver || !bus->driver->read_reg) return ESP_ERR_INVALID_ARG;
-    return bus->driver->read_reg(bus, addr, reg, data, len);
+    xSemaphoreTake(bus->mutex, portMAX_DELAY);
+    esp_err_t ret = bus->driver->read_reg(bus, addr, reg, data, len);
+    xSemaphoreGive(bus->mutex);
+    return ret;
 }
 
 static inline esp_err_t i2c_bus_write_reg(i2c_bus_dev_t *bus, uint8_t addr,
                                           uint8_t reg, const uint8_t *data, size_t len) {
     if (!bus || !bus->driver || !bus->driver->write_reg) return ESP_ERR_INVALID_ARG;
-    return bus->driver->write_reg(bus, addr, reg, data, len);
+    xSemaphoreTake(bus->mutex, portMAX_DELAY);
+    esp_err_t ret = bus->driver->write_reg(bus, addr, reg, data, len);
+    xSemaphoreGive(bus->mutex);
+    return ret;
 }
 
 static inline esp_err_t i2c_bus_recovery(i2c_bus_dev_t *bus) {
     if (!bus || !bus->driver || !bus->driver->bus_recovery) return ESP_ERR_INVALID_ARG;
-    return bus->driver->bus_recovery(bus);
+    xSemaphoreTake(bus->mutex, portMAX_DELAY);
+    esp_err_t ret = bus->driver->bus_recovery(bus);
+    xSemaphoreGive(bus->mutex);
+    return ret;
 }
 
 #ifdef __cplusplus

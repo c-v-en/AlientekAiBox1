@@ -141,7 +141,7 @@ esp_err_t app_event_init(void) {
     
     s_ctx.running = true;
     
-    if (xTaskCreate(app_event_task, "app_event", 4096, NULL, 4, &s_ctx.task) != pdPASS) {
+    if (xTaskCreatePinnedToCore(app_event_task, "app_event", 4096, NULL, 4, &s_ctx.task, 1) != pdPASS) {
         return ESP_FAIL;
     }
     

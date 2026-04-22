@@ -165,10 +165,10 @@ esp_err_t sc_component_init(sc_component_t *self)
     char task_name[32];
     snprintf(task_name, sizeof(task_name), "sc_%s", self->name);
     
-    BaseType_t err = xTaskCreate(sc_task, task_name,
+    BaseType_t err = xTaskCreatePinnedToCore(sc_task, task_name,
                                   self->config.task_stack_size,
                                   self, self->config.task_priority,
-                                  &self->task);
+                                  &self->task, 0);
     if (err != pdPASS) {
         ESP_LOGE(TAG, "Failed to create task");
         ret = ESP_FAIL;

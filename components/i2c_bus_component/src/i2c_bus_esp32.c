@@ -228,6 +228,12 @@ i2c_bus_dev_t* i2c_bus_create_esp32(int scl_gpio, int sda_gpio, uint32_t freq)
     bus->driver = &i2c_bus_esp32_iface;
     bus->driver_ctx = ctx;
     bus->initialized = false;
+    bus->mutex = xSemaphoreCreateMutex();
+    if (!bus->mutex) {
+        free(ctx);
+        free(bus);
+        return NULL;
+    }
 
     return bus;
 }

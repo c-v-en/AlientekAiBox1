@@ -8,6 +8,7 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "freertos/timers.h"
+#include "freertos/queue.h"
 #include "esp_log.h"
 
 #define TAG "app_wifi"
@@ -18,6 +19,17 @@ static sc_component_t *s_sc = NULL;
 static app_wifi_state_t s_state = APP_WIFI_STATE_IDLE;
 static TimerHandle_t s_prov_timer = NULL;
 static bool s_prov_timeout_flag = false; /* 配网超时标志 */
+
+static QueueHandle_t s_wifi_cmd_queue = NULL;
+
+typedef enum {
+    WIFI_CMD_START_PROVISIONING,
+    WIFI_CMD_STOP,
+    WIFI_CMD_CLEAR_CONFIG,
+} wifi_cmd_t;
+
+static esp_err_t app_wifi_start_provisioning_internal(void);
+static void app_wifi_ctrl_task(void *pvParam);
 
 /* ==================== 内部函数 ==================== */
 
@@ -208,6 +220,15 @@ esp_err_t app_wifi_init(void)
     s_state = APP_WIFI_STATE_IDLE;
 
     ESP_LOGI(TAG, "WiFi管理器初始化完成");
+
+    s_wifi_cmd_queue = xQueueCreate(4, sizeof(wifi_cmd_t));
+    if (!s_wifi_cmd_queue) {
+        ESP_LOGE(TAG, "Failed to create WiFi cmd queue");
+        return ESP_ERR_NO_MEM;
+    }
+
+    xTaskCreatePinnedToCore(app_wifi_ctrl_task, "wifi_ctrl", 2048, NULL, 4, NULL, 0);
+
     return ESP_OK;
 }
 
@@ -262,7 +283,7 @@ esp_err_t app_wifi_get_ssid(char *ssid, size_t len)
     return ESP_ERR_NOT_FOUND;
 }
 
-esp_err_t app_wifi_start_provisioning(void)
+static esp_err_t app_wifi_start_provisioning_internal(void)
 {
     if (!s_sc)
         return ESP_ERR_INVALID_STATE;
@@ -294,6 +315,45 @@ esp_err_t app_wifi_start_provisioning(void)
     vTaskDelay(pdMS_TO_TICKS(PROV_RETRY_DELAY_MS));
 
     return start_provisioning_with_timeout();
+}
+
+static void app_wifi_ctrl_task(void *pvParam)
+{
+    (void)pvParam;
+    wifi_cmd_t cmd;
+
+    for (;;) {
+        if (xQueueReceive(s_wifi_cmd_queue, &cmd, portMAX_DELAY)) {
+            switch (cmd) {
+                case WIFI_CMD_START_PROVISIONING:
+                    app_wifi_start_provisioning_internal();
+                    break;
+                case WIFI_CMD_STOP:
+                    app_wifi_stop();
+                    break;
+                case WIFI_CMD_CLEAR_CONFIG:
+                    app_wifi_clear_config();
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+}
+
+esp_err_t app_wifi_start_provisioning(void)
+{
+    if (xPortGetCoreID() == 0) {
+        return app_wifi_start_provisioning_internal();
+    }
+
+    if (!s_wifi_cmd_queue)
+        return ESP_ERR_INVALID_STATE;
+
+    wifi_cmd_t cmd = WIFI_CMD_START_PROVISIONING;
+    BaseType_t ret = xQueueSend(s_wifi_cmd_queue, &cmd, pdMS_TO_TICKS(100));
+
+    return (ret == pdTRUE) ? ESP_OK : ESP_FAIL;
 }
 
 esp_err_t app_wifi_clear_config(void)
