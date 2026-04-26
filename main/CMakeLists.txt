@@ -6,6 +6,7 @@ idf_component_register(
         "app_led.c"
         "led_gpio.c"
         "app_version.c"
+        "app_mqtt.c"
     INCLUDE_DIRS 
         "."
         "${CMAKE_SOURCE_DIR}/components/smartconfig_component/include"
@@ -20,4 +21,5 @@ idf_component_register(
         freertos
         driver
         esp_driver_gpio
+        mqtt
 )

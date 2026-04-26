@@ -40,6 +40,11 @@ typedef enum {
     APP_EVENT_KEY1_LONG,            /* KEY1长按 */
     APP_EVENT_KEY1_DOUBLE,          /* KEY1双击 */
     
+    /* MQTT 事件 (高优先级 3) */
+    APP_EVENT_MQTT_CONNECTED,       /* MQTT 已连接 */
+    APP_EVENT_MQTT_DISCONNECTED,    /* MQTT 断开 */
+    APP_EVENT_MQTT_DATA,            /* 收到 MQTT 消息 */
+    
     /* 系统事件 (低优先级 1) */
     APP_EVENT_INIT_DONE,            /* 优先级: 1 */
     APP_EVENT_VERSION_INFO,         /* 版本信息已就绪: 1 */
@@ -73,7 +78,13 @@ typedef struct {
             int error_code;
         } error;
         struct {
-            uint8_t data[16];
+            char topic[48];
+            char payload[80];
+            uint16_t payload_len;
+            uint16_t topic_len;
+        } mqtt;
+        struct {
+            uint8_t data[128];
         } raw;
     } data;
 } app_event_t;

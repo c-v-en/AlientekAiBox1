@@ -6,6 +6,7 @@
 #include "app_event.h"
 #include "app_wifi.h"
 #include "app_led.h"
+#include "app_mqtt.h"
 #include "app_version.h"
 #include "i2c_bus_component.h"
 #include "xl9555_component.h"
@@ -88,8 +89,15 @@ void app_init_task(void *pvParameters) {
         }
     }
     
-    /* 5. LED管理器（最后初始化，在所有外设就绪后启动） */
-    ESP_LOGI(TAG, "[5/5] 初始化LED...");
+    /* 5. MQTT 客户端（初始化但不连接，等 WiFi 就绪后自动连接） */
+    ESP_LOGI(TAG, "[5/5] 初始化MQTT...");
+    ret = app_mqtt_init();
+    if (ret != ESP_OK) {
+        ESP_LOGE(TAG, "MQTT初始化失败: %s", esp_err_to_name(ret));
+    }
+    
+    /* 6. LED管理器（最后初始化，在所有外设就绪后启动） */
+    ESP_LOGI(TAG, "[6/6] 初始化LED...");
     ret = app_led_init();
     if (ret != ESP_OK) {
         ESP_LOGE(TAG, "LED初始化失败: %s", esp_err_to_name(ret));
